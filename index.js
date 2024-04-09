@@ -37,7 +37,10 @@ document.addEventListener('click', (e) => {
         let inputTagEl = document.getElementById('inputtag')
         if(inputTagEl.value){
             listItems.unshift({value:`${inputTagEl.value}`})
-            localStorage.setItem('item',JSON.stringify(listItems))
+            
+            let value = JSON.stringify(listItems)
+            
+            localStorage.setItem('item', value) 
             renderTodos()
         
             inputTagEl.value=''
@@ -45,6 +48,8 @@ document.addEventListener('click', (e) => {
     }
 })
     
+
+window.onload = renderTodos()
 
 
 navigator.geolocation.getCurrentPosition((position) => {
@@ -100,13 +105,16 @@ fetch('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=MyGudGl
     function getFeedHtml(item){
         let feedHtml = ''
         let local = JSON.parse(localStorage.getItem('item'))
-        for(let item of local){
-            feedHtml += `
-                        <div class='inputs'>
-                            <p>${item.value}</p>  
-                        </div>
-                    `
+        if(local){
+            for(let item of local){
+                feedHtml += `
+                            <div class='inputs'>
+                                <p>${item.value}</p>  
+                            </div>
+                        `
+            }
         }
+        
         return feedHtml
     }
 
