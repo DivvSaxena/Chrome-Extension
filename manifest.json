@@ -1,19 +1,12 @@
 {
-    "short_name":"",
     "manifest_version": 3,
-    "name": "Personal Dashboard",
+    "name": "Dashboard",
     "version": "1.0.0",
-    "icons":[
-        {"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},
-        {"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}
-    ],
-    "theme_color":"#ffffff",
-    "background_color":"#ffffff",
-    "display":"standalone",
-    "chrome_url_overrides": {
-        "newtab": "index.html"
-    },
+    "description": "Just for practicing async JS added many ",
     "action": {
         "default_icon": "icon.png"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
     }
 }

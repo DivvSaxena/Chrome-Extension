@@ -30,10 +30,17 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin') // BITCOIN
         `
 
     })
+    .catch((err) => console.error(err))
 
     let listItems = []
 
-    document.getElementById('btn').addEventListener('click' , (e) => {
+document.addEventListener('click', (e) => {
+    if(e.target.textContent == 'remove'){
+        listItems = listItems.filter(item => item.id !== e.target.id)
+        localStorage.setItem('item',JSON.stringify(listItems))
+        renderTodos()
+    }
+    else if(e.target.id == 'btn'){
         let inputTagEl = document.getElementById('inputtag')
         if(inputTagEl.value){
             listItems.unshift({value:`${inputTagEl.value}`, id: `${uuidv4()}`})
@@ -42,15 +49,6 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin') // BITCOIN
         
             inputTagEl.value=''
         }
-    })
-
-    renderTodos()
-
-document.addEventListener('click', (e) => {
-    if(e.target.textContent == 'remove'){
-        listItems = listItems.filter(item => item.id !== e.target.id)
-        localStorage.setItem('item',JSON.stringify(listItems))
-        renderTodos()
     }
 })
     
@@ -73,8 +71,10 @@ navigator.geolocation.getCurrentPosition((position) => {
                 <p>${data.name}</p> 
             `
         })
+        .catch((err) => console.error(err))
 
 })
+
 
 
 /* ADDING TIME */
@@ -101,7 +101,7 @@ fetch('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=MyGudGl
             <a href='${data.results[0].url}'target="_blank">${data.results[0].title}</a>
         `
     })
-
+    .catch((err) => console.error(err))
 
 
     function getFeedHtml(item){
