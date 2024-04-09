@@ -1,3 +1,7 @@
+const todosFromLocalStorage = JSON.parse(localStorage.getItem('item'))
+let listItems = []
+
+
 fetch('https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature') // BG IMG
     .then(res => res.json())
     .then(data => {
@@ -30,12 +34,16 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin') // BITCOIN
     })
     .catch((err) => console.error(err))
 
-    let listItems = []
-
+  
 document.addEventListener('click', (e) => {
     if(e.target.id == 'btn'){
         let inputTagEl = document.getElementById('inputtag')
+    
         if(inputTagEl.value){
+            if(todosFromLocalStorage){
+                listItems = todosFromLocalStorage
+                 listItems.unshift({value:`${inputTagEl.value}`})
+            }
             listItems.unshift({value:`${inputTagEl.value}`})
             
             let value = JSON.stringify(listItems)

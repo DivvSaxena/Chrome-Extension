@@ -62,8 +62,28 @@ div.todolist{
     font-family: "McLaren", sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    overflow: scroll;
+    overflow-y: scroll;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
 
 .remove-btn{
     font-family: "McLaren", sans-serif;
@@ -128,7 +148,8 @@ div#weather > p{
     text-align: center;
     width: 100%;
     text-shadow: 1px 1px 10px #222222;
-    margin: 0;
+    margin: -0.5em 0 0 0;
+    font-size: 3rem;
 }
 
 
