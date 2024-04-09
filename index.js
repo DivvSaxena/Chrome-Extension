@@ -1,5 +1,3 @@
-import { v4 as uuidv4 } from 'https://jspm.dev/uuid';
-
 fetch('https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature') // BG IMG
     .then(res => res.json())
     .then(data => {
@@ -35,15 +33,10 @@ fetch('https://api.coingecko.com/api/v3/coins/bitcoin') // BITCOIN
     let listItems = []
 
 document.addEventListener('click', (e) => {
-    if(e.target.textContent == 'remove'){
-        listItems = listItems.filter(item => item.id !== e.target.id)
-        localStorage.setItem('item',JSON.stringify(listItems))
-        renderTodos()
-    }
-    else if(e.target.id == 'btn'){
+    if(e.target.id == 'btn'){
         let inputTagEl = document.getElementById('inputtag')
         if(inputTagEl.value){
-            listItems.unshift({value:`${inputTagEl.value}`, id: `${uuidv4()}`})
+            listItems.unshift({value:`${inputTagEl.value}`})
             localStorage.setItem('item',JSON.stringify(listItems))
             renderTodos()
         
@@ -111,7 +104,6 @@ fetch('https://api.nytimes.com/svc/mostpopular/v2/emailed/7.json?api-key=MyGudGl
             feedHtml += `
                         <div class='inputs'>
                             <p>${item.value}</p>  
-                            <button class="remove-btn" id="${item.id}">remove</button>
                         </div>
                     `
         }

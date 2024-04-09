@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Dashboard",
     "version": "1.0.0",
-    "description": "Just for practicing async JS added many ",
+    "description": "Just for practicing async JS added many fe",
     "action": {
         "default_icon": "icon.png"
     },
