@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=McLaren&family=Modak&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}    
+
+body {
+    margin: 0;
+    background: no-repeat center center fixed; 
+    background-size: cover;
+    color: white;
+}
+
+main{
+    height: 100vh;
+}
+
+
+div.first-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+}
+
+/* BITCOIN STYLING */
+div.bitcoin{
+    margin: -0.5em 0 0 2em;
+    width: 33%;
+    width: max-content;
+    font-family: "Luckiest Guy", cursive;
+    text-shadow: 1px 2px 10px #222222;
+}
+
+.bitcoin > h1{
+    font-size: 2.5rem;
+    font-family: "Luckiest Guy", cursive;
+    text-shadow: 1px 2px 10px #222222;
+}
+
+.bitcoin > p{
+    font-size: 1.5rem;
+}
+
+
+
+/* TODO LIST STYLING */
+div.todolist{
+    font-family: "Luckiest Guy", cursive;
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    text-shadow: 1px 1px 10px #222222;
+    margin: 0.5em 0 0 3em;
+}
+
+#feed{
+    height: 100px;
+    font-family: "McLaren", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    overflow: scroll;
+}
+
+.remove-btn{
+    font-family: "McLaren", sans-serif;
+    margin: 0.5em;
+    padding: 0.5em;
+    border-radius: 10px;
+    border: none;
+}
+
+.inputs{
+    background-color: #222222;
+    margin: 0.5em 0 0 0;
+}
+
+.inputs > p{
+    margin: 0;
+}
+
+.inputtag{
+    font-family: "McLaren", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.25em;
+}
+
+#btn{
+    font-family: "McLaren", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    padding: 0.15em;
+}
+
+
+
+/* WEATHER BOX STYLING */
+div#weather{
+    width: 33%;
+    font-family: "Luckiest Guy", cursive;
+    font-size: 2rem;
+    
+}
+
+.weather-first-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-first-row>p{
+    font-size: 4rem;
+    margin: 0.5em 0 0 0.125em;
+    text-shadow: 1px 1px 10px #222222;
+}
+
+.weather-first-row>img{
+    width: 50%;
+    margin: -1em;
+}
+
+div#weather > p{
+    text-align: center;
+    width: 100%;
+    text-shadow: 1px 1px 10px #222222;
+    margin: 0;
+}
+
+
+#author{
+    position: absolute;
+    bottom: 0;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 10px black;
+    margin: 1em;
+    font-weight: 900;
+}
+
+/* SECOND ROW */
+.second-row{
+    text-align: center;
+    font-size: 2.75rem;
+    position: relative;
+    top: auto;
+    right: auto;
+    left: auto;
+    bottom: auto;
+    margin: 0.5em;
+}
+
+.second-row>h1{
+    margin: 0.2em;
+}
+
+#time{
+    font-family: "Luckiest Guy", cursive;
+    font-weight: 400;
+    text-shadow: 2px 2px 10px darkblue;
+}
+
+#news > a{
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Modak", system-ui;
+    font-weight: 400;
+    text-shadow: 2px 2px 10px darkblue;
+    cursor: pointer;
+}
+
+#news > a:hover{
+    font-size: 3rem;
+    color: yellow;
+}
