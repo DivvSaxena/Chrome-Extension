@@ -41,8 +41,7 @@ document.addEventListener('click', (e) => {
     
         if(inputTagEl.value){
             if(todosFromLocalStorage){
-                listItems = todosFromLocalStorage
-                 listItems.unshift({value:`${inputTagEl.value}`})
+                 listItems = todosFromLocalStorage
             }
             listItems.unshift({value:`${inputTagEl.value}`})
             
